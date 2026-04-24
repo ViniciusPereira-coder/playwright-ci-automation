@@ -26,8 +26,11 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run automated tests
-        run: npm test
+      - name: Run smoke tests
+        run: npm run test:smoke
+
+      - name: Run regression tests
+        run: npm run test:regression
 
       - name: Upload Playwright HTML Report
         if: always()
