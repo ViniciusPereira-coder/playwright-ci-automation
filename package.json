@@ -2,8 +2,9 @@
   "name": "playwright-ci-automation",
   "version": "1.0.0",
   "scripts": {
-    "test": "playwright test",
-    "test:headed": "playwright test --headed"
+     "test": "playwright test",
+        "test:smoke": "playwright test --grep @smoke",
+        "test:regression": "playwright test --grep @regression"
   },
   "devDependencies": {
     "@playwright/test": "^1.51.0"
